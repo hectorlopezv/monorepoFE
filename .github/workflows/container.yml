@@ -1,14 +1,14 @@
-name: Build & deploy
+name: deploy app
 on:
   push:
     paths:
-      - "packages/container"
+      - 'packages/container/**'
     branches:
       - main
+      - master
 defaults:
   run:
     working-directory: packages/container
-
 jobs:
   build:
     runs-on: ubuntu-latest
