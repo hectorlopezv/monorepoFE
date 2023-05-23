@@ -1,2 +1,2 @@
 import("./bootstrap");
-console.log("Auth");
+console.log("Authhh");
