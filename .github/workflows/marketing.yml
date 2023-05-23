@@ -1,13 +1,13 @@
-name: deploy container app
+name: deploy marketing app
 on:
   push:
     paths:
-      - "packages/container/**"
+      - "packages/marketing/**"
     branches:
       - main
 defaults:
   run:
-    working-directory: packages/container
+    working-directory: packages/marketing
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,5 +22,5 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
-      - run: aws s3 sync dist s3://${{ secrets.AWS_BUCKET_NAME }}/container/latest
-      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/container/lastest/index.html"
+      - run: aws s3 sync dist s3://${{ secrets.AWS_BUCKET_NAME }}/marketing/latest
+      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/marketing/lastest/index.html"
