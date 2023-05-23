@@ -23,4 +23,4 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
       - run: aws s3 sync dist s3://${{ secrets.AWS_BUCKET_NAME }}/container/latest
-      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/container/lastest/index.html"
+      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/container/latest/index.html"
