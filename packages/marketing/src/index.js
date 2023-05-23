@@ -1,2 +1,2 @@
 import("./bootstrap");
-console.log("Marketing!");
+console.log("Marketingg!");
