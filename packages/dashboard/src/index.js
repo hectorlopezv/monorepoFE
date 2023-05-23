@@ -1,2 +1,2 @@
 import("./bootstrap");
-console.log("Dashboard");
+console.log("Dashboardd");
