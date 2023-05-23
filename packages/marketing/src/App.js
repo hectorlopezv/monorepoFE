@@ -3,7 +3,7 @@ import {
   createGenerateClassName,
 } from "@material-ui/core/styles";
 import React from "react";
-import { Router, Switch } from "react-router-dom";
+import { Route, Router, Switch } from "react-router-dom";
 import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
 const generateClassName = createGenerateClassName({
