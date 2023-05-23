@@ -19,10 +19,7 @@ const devConfig = {
         "./MarketingApp": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
-    }),
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
+    })
   ],
 };
 module.exports = merge(commonConfig, devConfig);
